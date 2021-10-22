@@ -10,6 +10,8 @@
     </a>
 </div>
 
+<?php if($immovables) : ?>
+
 <table class="table table-striped">
     <thead class="thead-dark ">
         <tr>
@@ -48,3 +50,9 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+
+<?php else : ?>
+
+<h2>Nenhum Imovel cadastrado!!!</h2>
+
+<?php endif ?>
