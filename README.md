@@ -26,10 +26,11 @@
  1. Clonar o repositório em um servidor
  2. Criar banco de dados com nome imobiliaria
  3. Executar a query da pasta bd
- 4. Abrir o arquivo Config.php na pasta source e prencher as infomações do seu servidor de banco
+ 4. Abrir o arquivo Config.php na pasta source e prencher as infomações do seu servidor de banco, ROOT e BASE_URL
  5. Instalar o composer link(https://getcomposer.org/)
- 6. abrir terminal na pasta do projeto e executar o comando 'composer init' e em seguida 'composer update'
- 7. Conta default login: admin, senha: 12345
+ 6. abrir terminal na pasta do projeto e executar o comando 'composer update'
+ 7. Renomear o arquivo 'htaccess' para '.htaccess'
+ 8. Conta default login: admin, senha: 12345
 
 ------------------------------------------
 ## Require do composer
@@ -57,4 +58,4 @@
 
 ------------------------------------------
 ## Bugs conhecidos
-* Pagina de usuario permite exclusao de propria conta, mesmo senoa unica(apresenta um erro)
+* Pagina de usuario e imovel sem dados apresenta um warning na tela
