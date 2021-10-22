@@ -1,10 +1,12 @@
 # Imobiliaria
 ## Integrantes do grupo
 * **Guilherme Ortiz**
+  * RA 2058944
   * Aluno de Ciência da Computação na UTFPR.
   * Programador da Scheffer Logística e Automação.
 
 * **Dennis Rupel**
+  * RA 1687646
   * Aluno de Ciência da Computação na UTFPR.
   * Programador da Scheffer Logística e Automação.
 
