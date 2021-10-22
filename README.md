@@ -23,8 +23,11 @@
 ## Instalação
  1. Clonar o repositório em um servidor
  2. Criar banco de dados com nome imobiliaria
- 2. Executar a query da pasta bd
- 3. Conta default login: admin, senha: 12345
+ 3. Executar a query da pasta bd
+ 4. Abrir o arquivo Config.php na pasta source e prencher as infomações do seu servidor de banco
+ 5. Instalar o composer link(https://getcomposer.org/)
+ 6. abrir terminal na pasta do projeto e executar o comando 'composer init' e em seguida 'composer update'
+ 7. Conta default login: admin, senha: 12345
 
 ------------------------------------------
 ## Require do composer
