@@ -57,4 +57,4 @@
 
 ------------------------------------------
 ## Bugs conhecidos
-* Pagina de usuario e imovel sem dados apresenta um warning na tela
+* Pagina de usuario permite exclusao de propria conta, mesmo senoa unica(apresenta um erro)
