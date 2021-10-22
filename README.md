@@ -39,7 +39,7 @@
 
  ------------------------------------------
 ## Styles e Scripts de terceiros
- 1. Bootstrao
+ 1. Bootstrap
  2. jquery
  3. Font Awesome
 
