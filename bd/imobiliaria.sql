@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 19-Nov-2021 às 21:58
+-- Tempo de geração: 19-Nov-2021 às 22:00
 -- Versão do servidor: 8.0.21
 -- versão do PHP: 7.3.21
 
@@ -36,14 +36,15 @@ CREATE TABLE IF NOT EXISTS `bairros` (
   `id_cidade` int NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   KEY `Cidade_Endereco` (`id_cidade`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `bairros`
 --
 
 INSERT INTO `bairros` (`id`, `descricao`, `created_at`, `updated_at`, `id_cidade`) VALUES
-(1, 'Morada do sol 4', '2021-11-08 23:34:40', '2021-11-08 23:34:43', 1);
+(12, 'Centro', '2021-11-20 01:00:06', '2021-11-20 01:00:06', 1),
+(13, 'Centro', '2021-11-20 01:00:12', '2021-11-20 01:00:12', 7);
 
 -- --------------------------------------------------------
 
@@ -88,21 +89,6 @@ CREATE TABLE IF NOT EXISTS `enderecos` (
   KEY `Bairro` (`id_bairro`),
   KEY `Cidade` (`id_cidade`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Extraindo dados da tabela `enderecos`
---
-
-INSERT INTO `enderecos` (`id`, `cep`, `rua`, `numero`, `created_at`, `updated_at`, `id_cidade`, `id_bairro`) VALUES
-(15, '845050', 'rua percy bannach lopes', '558', '2021-10-22 01:56:48', '2021-10-22 01:56:48', 1, 1),
-(16, '845050', 'rua percy bannach lopes', '556', '2021-10-22 02:34:41', '2021-10-22 02:34:41', 1, 1),
-(17, '10000', 'aquela rua', '123', '2021-10-22 17:05:00', '2021-10-22 17:05:00', 1, 1),
-(18, '10000', 'aquela rua', '123', '2021-10-22 17:05:10', '2021-10-22 17:05:10', 1, 1),
-(19, '10000', 'aquela rua', '123', '2021-10-22 17:12:26', '2021-10-22 17:12:26', 1, 1),
-(20, '10000', 'aquela rua', '123', '2021-10-22 17:12:59', '2021-10-22 17:12:59', 1, 1),
-(21, '10000', 'aquela rua', '123', '2021-10-22 19:13:36', '2021-10-22 19:13:36', 1, 1),
-(22, '1000', 'rua 1', '123', '2021-10-23 01:35:06', '2021-10-23 01:35:06', 1, 1),
-(23, '84172190', 'rua', '556', '2021-11-18 04:05:33', '2021-11-18 04:05:33', 1, 1);
 
 -- --------------------------------------------------------
 
