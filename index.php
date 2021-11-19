@@ -10,8 +10,9 @@
 
     /*
     * APP
+    * www
     */
-    $router->namespace("Source\App");
+    $router->namespace("Source\App\www");
 
     /*
     * WEB
@@ -20,68 +21,78 @@
     $router->get("/", "Web:login");
     $router->post("/", "Web:signIn");
 
+    $router->group(null);
+    $router->get("/sair", "Web:signOut");
+
     /*
-    * ADMIN
+    * APP
+    * Admin
     */
+    $router->namespace("Source\App\Admin");
 
     /*
     * home
     */
     $router->group(null);
     $router->get("/", "Admin:home");
-    $router->get("/sair", "Web:signOut");
 
     /*
     * immovable
     */
     $router->group("imovel");
-    $router->get("/", "Admin:immovable");
-    $router->get("/criar", "Admin:immovableCreate");
-    $router->post("/criar", "Admin:immovablePost");
-    $router->get("/editar", "Admin:immovableUpdate");
-    $router->put("/editar", "Admin:immovablePut");
-    $router->delete("/", "Admin:immovableDelete");
+    $router->get("/", "ImmovableController:list");
+    $router->get("/criar", "ImmovableController:create");
+    $router->post("/criar", "ImmovableController:post");
+    $router->get("/editar", "ImmovableController:update");
+    $router->put("/editar", "ImmovableController:put");
+    $router->delete("/", "ImmovableController:delete");
     
     /*
     * type
     */
     $router->group("tipo");
-    $router->get("/", "Admin:type");
+    $router->get("/", "TypeController:list");
+    $router->post("/", "TypeController:post");
+    $router->delete("/", "TypeController:delete");
 
     /*
     * city
     */
     $router->group("cidade");
-    $router->get("/", "Admin:city");
+    $router->get("/", "CityController:list");
+    $router->post("/", "CityController:post");
+    $router->delete("/", "CityController:delete");
 
     /*
     * cidade
     */
     $router->group("bairro");
-    $router->get("/", "Admin:district");
+    $router->get("/", "DistrictController:list");
+    $router->post("/", "DistrictController:post");
+    $router->delete("/", "DistrictController:delete");
 
     /*
     * user
     */
     $router->group("usuario");
-    $router->get("/", "Admin:user");
-    $router->get("/criar", "Admin:userCreate");
-    $router->post("/criar", "Admin:userPost");
-    $router->get("/editar", "Admin:userUpdate");
-    $router->put("/editar", "Admin:userPut");
-    $router->delete("/", "Admin:userDelete");
+    $router->get("/", "UserController:list");
+    $router->get("/criar", "UserController:create");
+    $router->post("/criar", "UserController:post");
+    $router->get("/editar", "UserController:update");
+    $router->put("/editar", "UserController:put");
+    $router->delete("/", "UserController:delete");
 
     /*
     * profile
     */
     $router->group("perfil");
-    $router->get("/", "Admin:profile");
+    $router->get("/", "ProfileController:list");
 
     /*
     * settings
     */
     $router->group("configuracao");
-    $router->get("/", "Admin:settings");
+    $router->get("/", "SettingsController:list");
 
     /*
     * ERROR

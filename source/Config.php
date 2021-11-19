@@ -1,8 +1,8 @@
 <?php
 
-define("ROOT", "http://localhost:4444/imobiliaria/src");
+define("ROOT", "http://localhost/imobiliaria/src");
 
-define("BASE_URL", "http://localhost:4444/imobiliaria");
+define("BASE_URL", "http://localhost/imobiliaria");
 
 define("SITE", "imobiliaria");
 

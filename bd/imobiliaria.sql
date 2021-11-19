@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 22-Out-2021 às 16:37
--- Versão do servidor: 5.7.31
+-- Tempo de geração: 19-Nov-2021 às 21:58
+-- Versão do servidor: 8.0.21
 -- versão do PHP: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,21 +29,21 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `bairros`;
 CREATE TABLE IF NOT EXISTS `bairros` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `descricao` varchar(80) COLLATE utf8_bin NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(80) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `id_cidade` int(11) NOT NULL,
+  `id_cidade` int NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   KEY `Cidade_Endereco` (`id_cidade`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `bairros`
 --
 
 INSERT INTO `bairros` (`id`, `descricao`, `created_at`, `updated_at`, `id_cidade`) VALUES
-(1, 'Morada do sol 4', NULL, NULL, 1);
+(1, 'Morada do sol 4', '2021-11-08 23:34:40', '2021-11-08 23:34:43', 1);
 
 -- --------------------------------------------------------
 
@@ -53,19 +53,20 @@ INSERT INTO `bairros` (`id`, `descricao`, `created_at`, `updated_at`, `id_cidade
 
 DROP TABLE IF EXISTS `cidades`;
 CREATE TABLE IF NOT EXISTS `cidades` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `descricao` varchar(80) COLLATE utf8_bin NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(80) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `cidades`
 --
 
 INSERT INTO `cidades` (`id`, `descricao`, `created_at`, `updated_at`) VALUES
-(1, 'Castro', NULL, NULL);
+(1, 'Castro', '2021-11-08 23:17:49', '2021-11-08 23:17:52'),
+(7, 'Ponta Grossa', '2021-11-18 04:20:04', '2021-11-18 04:20:04');
 
 -- --------------------------------------------------------
 
@@ -75,18 +76,18 @@ INSERT INTO `cidades` (`id`, `descricao`, `created_at`, `updated_at`) VALUES
 
 DROP TABLE IF EXISTS `enderecos`;
 CREATE TABLE IF NOT EXISTS `enderecos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cep` varchar(8) COLLATE utf8_bin NOT NULL,
-  `rua` varchar(30) COLLATE utf8_bin NOT NULL,
-  `numero` varchar(30) COLLATE utf8_bin NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cep` varchar(8) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `rua` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `numero` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `id_cidade` int(11) NOT NULL,
-  `id_bairro` int(11) NOT NULL,
+  `id_cidade` int NOT NULL,
+  `id_bairro` int NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   KEY `Bairro` (`id_bairro`),
   KEY `Cidade` (`id_cidade`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `enderecos`
@@ -99,7 +100,9 @@ INSERT INTO `enderecos` (`id`, `cep`, `rua`, `numero`, `created_at`, `updated_at
 (18, '10000', 'aquela rua', '123', '2021-10-22 17:05:10', '2021-10-22 17:05:10', 1, 1),
 (19, '10000', 'aquela rua', '123', '2021-10-22 17:12:26', '2021-10-22 17:12:26', 1, 1),
 (20, '10000', 'aquela rua', '123', '2021-10-22 17:12:59', '2021-10-22 17:12:59', 1, 1),
-(21, '10000', 'aquela rua', '123', '2021-10-22 19:13:36', '2021-10-22 19:13:36', 1, 1);
+(21, '10000', 'aquela rua', '123', '2021-10-22 19:13:36', '2021-10-22 19:13:36', 1, 1),
+(22, '1000', 'rua 1', '123', '2021-10-23 01:35:06', '2021-10-23 01:35:06', 1, 1),
+(23, '84172190', 'rua', '556', '2021-11-18 04:05:33', '2021-11-18 04:05:33', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -109,12 +112,12 @@ INSERT INTO `enderecos` (`id`, `cep`, `rua`, `numero`, `created_at`, `updated_at
 
 DROP TABLE IF EXISTS `galerias`;
 CREATE TABLE IF NOT EXISTS `galerias` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `descricao` varchar(80) COLLATE utf8_bin NOT NULL,
-  `mes` int(11) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(80) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `mes` int NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `id_imovel` int(11) NOT NULL,
+  `id_imovel` int NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   KEY `Galeria` (`id_imovel`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -127,25 +130,18 @@ CREATE TABLE IF NOT EXISTS `galerias` (
 
 DROP TABLE IF EXISTS `imoveis`;
 CREATE TABLE IF NOT EXISTS `imoveis` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `referencia` varchar(10) COLLATE utf8_bin NOT NULL,
-  `descricao` text COLLATE utf8_bin NOT NULL,
-  `venda` int(11) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `referencia` varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `descricao` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `venda` int NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `id_tipo` int(11) NOT NULL,
-  `id_endereco` int(11) NOT NULL,
+  `id_tipo` int NOT NULL,
+  `id_endereco` int NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   KEY `Tipo` (`id_tipo`),
   KEY `Endereco` (`id_endereco`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Extraindo dados da tabela `imoveis`
---
-
-INSERT INTO `imoveis` (`id`, `referencia`, `descricao`, `venda`, `created_at`, `updated_at`, `id_tipo`, `id_endereco`) VALUES
-(25, '1234', '4545', 30000, '2021-10-22 17:12:26', '2021-10-22 19:13:46', 1, 19);
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -155,19 +151,19 @@ INSERT INTO `imoveis` (`id`, `referencia`, `descricao`, `venda`, `created_at`, `
 
 DROP TABLE IF EXISTS `tipos`;
 CREATE TABLE IF NOT EXISTS `tipos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `descricao` varchar(30) COLLATE utf8_bin NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `tipos`
 --
 
 INSERT INTO `tipos` (`id`, `descricao`, `created_at`, `updated_at`) VALUES
-(1, 'casa', NULL, NULL);
+(14, 'Casa', '2021-11-18 04:03:09', '2021-11-18 04:03:09');
 
 -- --------------------------------------------------------
 
@@ -177,7 +173,7 @@ INSERT INTO `tipos` (`id`, `descricao`, `created_at`, `updated_at`) VALUES
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
   `sobrenome` varchar(50) NOT NULL,
   `usuario` varchar(50) NOT NULL,
@@ -186,14 +182,14 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `sobrenome`, `usuario`, `senha`, `email`, `created_at`, `updated_at`) VALUES
-(5, 'Conta', 'Admin', 'admin', '$2y$10$qEDNXchV2ucmnjrNO0/oRueniQZW7M4wD/TF5VfuJBMFujn2TkMNi', 'admin@hotmail.com', '2021-10-22 19:14:20', '2021-10-22 19:35:54');
+(9, 'Admin', 'admin', 'Admin', '$2y$10$qGtVhUIiRuJGyq6sM/ylvOKzETLFWr5z50Q5nxyC5/fpSA3/Vp.mq', 'admin@hotmail.com', '2021-11-20 00:56:43', '2021-11-20 00:56:43');
 
 --
 -- Restrições para despejos de tabelas

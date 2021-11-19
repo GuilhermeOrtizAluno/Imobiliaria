@@ -17,8 +17,7 @@
   * MVC
   * Interfaces Graficas
 * Dennis Rupel
-  * USER(CRUD)
-  * IMOVEL(CRUD)
+  * CRUD
   * Banco de Dados
 
 ------------------------------------------
@@ -48,14 +47,8 @@
 
 ------------------------------------------
 ## Funcionalidades pendentes
-- [ ] Pagina inicial
-- [ ] Pagina/CRUD Tipo
-- [ ] Pagina/CRUD Cidade
-- [ ] Pagina/CRUD Bairro
-- [ ] Pagina/CRUD Perfil
-- [ ] Pagina/CRUD Configuração
 - [ ] mensagens de feedback e erros 
 
 ------------------------------------------
 ## Bugs conhecidos
-* Pagina de usuario e imovel sem dados apresenta um warning na tela
+* Reload na tela depois de efeutar o crud
