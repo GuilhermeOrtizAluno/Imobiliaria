@@ -1,0 +1,30 @@
+{
+    "name": "guilherme.santos/imobiliaria",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "GuilhermeOrtizDev",
+            "email": "guiortizsantos12@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "require": {
+        "php" : "^7.3",
+        "ext-pdo" : "*",
+        "coffeecode/router" : "1.0.*",
+        "league/plates" : "v4.0.0-alpha",
+        "mashape/unirest-php": "3.*"
+    }
+
+}

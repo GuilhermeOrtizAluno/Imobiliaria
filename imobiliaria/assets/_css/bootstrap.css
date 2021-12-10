@@ -1,0 +1,440 @@
+.box-primary{
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    border-width: .2rem;
+    border-style: solid;
+    padding: 1.5rem;
+}
+
+.text-small{
+    font-size: .7rem;
+}
+
+.h-300px{
+    height: 300px;
+}
+
+.h-80{
+    height: 80%;
+}
+
+.h-20{
+    height: 20%;
+}
+
+.top{
+    top: 10px;
+}
+
+.right{
+    right: 10px;
+}
+
+.bottom{
+    bottom: 10px;
+}
+
+.left{
+    left: 10px;
+}
+
+.top-0{
+    top: 0;
+}
+
+.right-0{
+    right: 0;
+}
+
+.bottom-0{
+    bottom: 0;
+}
+
+.left-0{
+    left: 0;
+}
+
+.top-50{
+    top: 50%;
+}
+
+.right-50{
+    right: 50%;
+}
+
+
+.bottom-50{
+    bottom: 50%;
+}
+
+.left-50{
+    left: 50%;
+}
+
+.top-50, .bottom-50, 
+.top-sm-50, .bottom-sm-50,
+.top-md-50, .bottom-md-50,
+.top-lg-50, .bottom-lg-50, 
+.top-xl-50, .bottom-xl-50{
+    transform: translateY(-50%);
+}
+
+.right-50, .left-50,
+.right-sm-50, .left-sm-50,
+.right-md-50, .left-md-50,
+.right-lg-50, .left-lg-50, 
+.right-xl-50, .left-xl-50{
+    transform: translateX(-50%);
+}  
+
+.img-cover{
+    object-fit: cover;
+}
+
+.img-cover-top{
+    object-position: top;
+}
+
+.img-cover-bottom{
+    object-position: bottom;
+}
+
+.img-cover-center{
+    object-position: center;
+}
+
+.img-cover-bottom{
+    object-position: right;
+}
+
+.img-cover-bottom{
+    object-position: left;
+}
+
+.z-1{
+    z-index: 1;
+}
+
+.z-2{
+    z-index: 2;
+}
+
+.z-3{
+    z-index: 3;
+}
+
+.z-4{
+    z-index: 4;
+}
+
+.z-5{
+    z-index: 99;
+}
+
+[slider] {
+    position: relative;
+    height: 50px;
+    margin: 10px 0;
+}
+
+[slider] > div {
+    position: absolute;
+    left: 13px;
+    right: 15px;
+    height: 5px;
+}
+[slider] > div > [inverse-left] {
+    position: absolute;
+    left: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #CCC;
+    margin: 0 7px;
+}
+
+[slider] > div > [inverse-right] {
+    position: absolute;
+    right: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #CCC;
+    margin: 0 7px;
+}
+
+
+[slider] > div > [range] {
+    position: absolute;
+    left: 0;
+    height: 5px;
+    border-radius: 14px;
+    background-color: var(--primary-hover-color)!important;
+}
+
+[slider] > div > [thumb] {
+    position: absolute;
+    top: -7px;
+    z-index: 2;
+    height: 20px;
+    width: 20px;
+    text-align: left;
+    margin-left: -11px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    background-color: #FFF;
+    border-radius: 50%;
+    outline: none;
+}
+
+[slider] > input[type=range] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 3;
+    height: 14px;
+    top: -2px;
+    width: 100%;
+    opacity: 0;
+}
+
+div[slider] > input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border: transparent;
+}
+
+div[slider] > input[type=range]:focus {
+    outline: none;
+}
+
+div[slider] > input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+    -webkit-appearance: none;
+}
+
+div[slider] > input[type=range]::-ms-fill-lower {
+    background: transparent;
+    border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-fill-upper {
+    background: transparent;
+    border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-tooltip {
+    display: none;
+}
+
+[slider] > div > [sign] > span {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.pagination .page-numbers {
+    padding: 5px 10px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.pagination .current {
+    background: #666;
+}
+
+@media (min-width: 576px) { 
+    .top-xs-0{
+        top: 0;
+    }
+    
+    .right-xs-0{
+        right: 0;
+    }
+    
+    .bottom-xs-0{
+        bottom: 0;
+    }
+    
+    .left-xs-0{
+        left: 0;
+    } 
+
+    .top-xs-50{
+        top: 50%;
+    }
+    
+    .right-xs-50{
+        right: 50%;
+    }
+    
+    .bottom-xs-50{
+        bottom: 50%;
+    }
+    
+    .left-xs-50{
+        left: 50%;
+    } 
+
+    .position-xs-absolute{
+        position: absolute;
+    }
+}
+
+@media (min-width: 768px) { 
+    .top-sm-0{
+        top: 0;
+    }
+    
+    .right-sm-0{
+        right: 0;
+    }
+    
+    .bottom-sm-0{
+        bottom: 0;
+    }
+    
+    .left-sm-0{
+        left: 0;
+    } 
+
+    .top-sm-50{
+        top: 50%;
+    }
+    
+    .right-sm-50{
+        right: 50%;
+    }
+    
+    .bottom-sm-50{
+        bottom: 50%;
+    }
+    
+    .left-sm-50{
+        left: 50%;
+    } 
+
+    .position-sm-absolute{
+        position: absolute;
+    }
+}
+
+@media (min-width: 992px) { 
+   
+    .top-md-0{
+        top: 0;
+    }
+    
+    .right-md-0{
+        right: 0;
+    }
+    
+    .bottom-md-0{
+        bottom: 0;
+    }
+    
+    .left-md-0{
+        left: 0;
+    } 
+
+    .top-md-50{
+        top: 50%;
+    }
+    
+    .right-md-50{
+        right: 50%;
+    }
+    
+    .bottom-md-50{
+        bottom: 50%;
+    }
+    
+    .left-md-50{
+        left: 50%;
+    }
+
+    .position-md-absolute{
+        position: absolute;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .top-lg-0{
+        top: 0;
+    }
+    
+    .right-lg-0{
+        right: 0;
+    }
+    
+    .bottom-lg-0{
+        bottom: 0;
+    }
+    
+    .left-lg-0{
+        left: 0;
+    } 
+    .top-lg-50{
+        top: 50%;
+    }
+    
+    .right-lg-50{
+        right: 50%;
+    }
+    
+    .bottom-lg-50{
+        bottom: 50%;
+    }
+    
+    .left-lg-50{
+        left: 50%;
+    }
+
+    .position-lg-absolute{
+        position: absolute;
+    }
+}
+
+@media (min-width: 1400px) { 
+    
+    .top-xl-0{
+        top: 0;
+    }
+    
+    .right-xl-0{
+        right: 0;
+    }
+    
+    .bottom-xl-0{
+        bottom: 0;
+    }
+    
+    .left-xl-0{
+        left: 0;
+    } 
+
+    .top-xl-50{
+        top: 50%;
+    }
+    
+    .right-xl-50{
+        right: 50%;
+    }
+    
+    .bottom-xl-50{
+        bottom: 50%;
+    }
+    
+    .left-xl-50{
+        left: 50%;
+    }
+     
+    .position-xl-absolute{
+        position: absolute;
+    }
+}   

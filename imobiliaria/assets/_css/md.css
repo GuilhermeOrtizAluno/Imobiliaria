@@ -1,0 +1,62 @@
+@media (min-width: 768px) { 
+    
+    /* header .nav_menu{
+        left: auto;
+        top: 10px;
+        right: 50px;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        position: absolute;
+    }
+
+    header .nav_menu nav {
+        position: initial;
+        top: auto;
+        left: auto;
+        transform: translate(0, 0);
+        flex-flow: row;
+    } */
+
+    nav .menu{
+        position: absolute;
+        flex-direction: row;
+        left: auto;
+        right: 30px;
+        top: 13px;
+        height: auto;
+        width: auto;
+        background-color: transparent !important;
+    }
+
+    /* label[for="checkbox_menu"]{
+        visibility: hidden;
+    } */
+
+    header .soon{
+        left: 50px;
+    }
+
+    header .soon, header .soon #bg-logo{
+        height: 162px;
+        width: 200px;  
+    }
+
+    header .soon #logo{
+        height: 90px;
+        width: 120px;
+    }
+
+    header .soon:hover #bg-logo{
+        height: 192px;
+    }
+
+    label[for="checkbox_menu"]{
+        display: none;
+    }
+
+    .bg_information{
+        padding: 6rem;
+    }
+
+}
