@@ -23,7 +23,7 @@
 ------------------------------------------
 ## Instalação
  1. Clonar o repositório em um servidor
- 2. Abrir o arquivo Config.php na pasta imboiliaria source e prencher as infomações do seu servidor de banco, ROOT e BASE_URL
+ 2. Abrir o arquivo Config.php na pasta imboiliaria/source e prencher as infomações ROOT e BASE_URL
  3. Instalar o composer link(https://getcomposer.org/)
  4. abrir terminal na pasta do projeto api e imobiliaria e executar o comando 'composer update' em cada um.
  5. Renomear o arquivo 'htaccess' para '.htaccess' da imobiliaria e '.env.example' '.env' da api
