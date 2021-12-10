@@ -23,21 +23,11 @@
 ------------------------------------------
 ## Instalação
  1. Clonar o repositório em um servidor
- 2. Criar banco de dados com nome imobiliaria
- 3. Executar a query da pasta bd
- 4. Abrir o arquivo Config.php na pasta source e prencher as infomações do seu servidor de banco, ROOT e BASE_URL
- 5. Instalar o composer link(https://getcomposer.org/)
- 6. abrir terminal na pasta do projeto e executar o comando 'composer update'
- 7. Renomear o arquivo 'htaccess' para '.htaccess'
- 8. Conta default login: admin, senha: 12345
-
-------------------------------------------
-## Require do composer
- 1. php ^7.3
- 2. ext-pdo
- 3. datalayer 1.1.*
- 4. plates v4.0.0-alpha
- 5. router 1.0.*
+ 2. Abrir o arquivo Config.php na pasta imboiliaria source e prencher as infomações do seu servidor de banco, ROOT e BASE_URL
+ 3. Instalar o composer link(https://getcomposer.org/)
+ 4. abrir terminal na pasta do projeto api e imobiliaria e executar o comando 'composer update' em cada um.
+ 5. Renomear o arquivo 'htaccess' para '.htaccess' da imobiliaria e '.env.example' '.env' da api
+ 6. Executar na pasta api 'php artisan serve'
 
  ------------------------------------------
 ## Styles e Scripts de terceiros
